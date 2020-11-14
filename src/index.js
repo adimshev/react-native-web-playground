@@ -1,7 +1,10 @@
-import 'react-native-gesture-handler';
-import React from 'react';
-import Navigation from './Navigation';
+import {AppRegistry} from 'react-native';
+import App from './App';
 
-export default function App() {
-  return <Navigation />;
-}
+const appName = 'utair';
+
+AppRegistry.registerComponent(appName, () => App);
+AppRegistry.runApplication(appName, {
+  // Mount the react-native app in the "root" div of index.html
+  rootTag: document.getElementById('root'),
+});

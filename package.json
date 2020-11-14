@@ -7,23 +7,31 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "web:start": "craco start",
+    "web:build": "craco build"
   },
   "dependencies": {
+    "@craco/craco": "^5.8.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.8.9",
+    "@react-navigation/stack": "^5.12.6",
     "react": "16.13.1",
+    "react-dom": "^16.13.1",
     "react-native": "0.63.3",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "^3.1.9",
-    "react-native-screens": "^2.14.0"
+    "react-native-screens": "^2.14.0",
+    "react-native-web": "^0.14.8",
+    "react-scripts": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.0.0",
     "eslint": "^7.13.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
@@ -31,5 +39,23 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
